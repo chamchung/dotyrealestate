@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doty Real Estate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #EFE9DD; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  ::selection { background: #25342A; color: #EFE9DD; }
+  a { text-decoration: none; }
+
+  @keyframes dotyMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes dotySlide   { from { transform: translateY(28px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+  [data-reveal] { animation: dotySlide both; animation-timeline: view(); animation-range: entry 0% cover 32%; }
+  @media (prefers-reduced-motion: reduce) { [data-reveal] { animation: none !important; transform: none !important; opacity: 1 !important; } }
+
+  /* testimonial transition */
+  .t-text { transition: opacity .34s ease, transform .34s ease; }
+  .t-attr  { transition: opacity .34s ease .06s, transform .34s ease .06s; }
+  .t-out   { opacity: 0; transform: translateY(14px); }
+
+  /* hover helpers */
+  .nav-link:hover  { color: #C9B79A !important; }
+  .cta-link:hover  { gap: 22px !important; color: #9A8A75 !important; }
+  .cta-link2:hover { gap: 22px !important; color: #9A8A75 !important; }
+  .comm-card:hover { transform: translateY(-9px); box-shadow: 0 24px 52px -16px rgba(33,28,21,.42); }
+  .comm-card:hover .comm-img { transform: scale(1.07); }
+  .art-card:hover  { transform: translateY(-9px); box-shadow: 0 18px 40px -12px rgba(33,28,21,.2); }
+  .svc-card:hover  { transform: translateY(-9px); box-shadow: 0 28px 56px -18px rgba(20,24,18,.6); }
+  .svc-card:hover .svc-img { transform: scale(1.06); }
+  .arr:hover { color: #C9B79A !important; }
+  .dot { cursor: pointer; transition: background .3s; }
+  .footer-link:hover { color: #9A8A75 !important; }
+  .connect-btn:hover { background: #25342A !important; color: #C9B79A !important; border-color: #C9B79A !important; }
+  .dl-btn:hover { background: #1b271f !important; letter-spacing: .28em !important; }
+  input:focus { border-color: #25342A !important; outline: none; }
+</style>
+</head>
+<body style="background:#EFE9DD;color:#211C15;font-family:'Jost',sans-serif;overflow-x:hidden;">
+
+<!-- ============ HERO ============ -->
+<section data-screen-label="Hero" style="position:relative;display:flex;min-height:94vh;background:#EFE9DD;">
+
+  <header style="position:absolute;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:34px 44px 0 5.5vw;">
+    <div style="line-height:1;">
+      <div style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:30px;letter-spacing:.42em;color:#211C15;">DOTY</div>
+      <div style="font-family:'Jost',sans-serif;font-weight:400;font-size:9px;letter-spacing:.5em;color:#6B6151;margin-top:5px;">REAL ESTATE</div>
+    </div>
+    <nav style="display:flex;align-items:center;gap:34px;">
+      <a href="#" class="nav-link" style="font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:#F4EFE6;transition:color .3s;">Buy</a>
+      <a href="#" class="nav-link" style="font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:#F4EFE6;transition:color .3s;">Sell</a>
+      <a href="#communities" class="nav-link" style="font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:#F4EFE6;transition:color .3s;">Communities</a>
+      <a href="#journal" class="nav-link" style="font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:#F4EFE6;transition:color .3s;">Journal</a>
+      <a href="#story" class="nav-link" style="font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:#F4EFE6;transition:color .3s;">About</a>
+      <a href="#" class="nav-link" style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#F4EFE6;transition:color .3s;">Join</a>
+      <a href="#guide" class="connect-btn" style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#F4EFE6;border:1px solid rgba(244,239,230,.55);padding:13px 26px;transition:all .35s;">Connect</a>
+    </nav>
+  </header>
+
+  <!-- left copy -->
+  <div style="position:relative;width:39%;display:flex;flex-direction:column;justify-content:center;padding:0 4vw 0 5.5vw;border-right:4px solid #9A8A75;">
+    <div style="position:absolute;left:30px;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:#9A8A75;">Southlake&nbsp;·&nbsp;Westlake&nbsp;·&nbsp;Keller&nbsp;·&nbsp;Colleyville</div>
+    <div>
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:30px;">
+        <span style="width:44px;height:1px;background:#9A8A75;"></span>
+        <span style="font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#6B6151;">Boutique Service. Local Expertise.</span>
+      </div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(52px,5.6vw,98px);line-height:.98;letter-spacing:-.01em;color:#211C15;margin:0;">The Art<br>of Finding<br><em style="font-style:italic;font-weight:500;color:#9A8A75;">Home.</em></h1>
+      <a href="#communities" class="cta-link" style="display:inline-flex;align-items:center;gap:12px;margin-top:42px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#211C15;border-bottom:1px solid rgba(33,28,21,.3);padding-bottom:8px;transition:gap .35s,color .35s;">Explore Properties&nbsp;<span style="font-size:15px;">→</span></a>
+    </div>
+  </div>
+
+  <!-- right image -->
+  <div style="position:relative;width:61%;overflow:hidden;">
+    <img src="assets/doty-hero.webp" alt="Luxury living room" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+    <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(225deg,rgba(20,24,18,.45),rgba(20,24,18,0) 42%);"></div>
+    <div style="position:absolute;top:108px;right:48px;text-align:right;color:#F4EFE6;pointer-events:none;">
+      <div style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:46px;line-height:1;">$250M+</div>
+      <div style="font-size:9px;letter-spacing:.3em;text-transform:uppercase;margin-top:10px;color:rgba(244,239,230,.78);">Career Sales</div>
+      <div style="font-size:9px;letter-spacing:.3em;text-transform:uppercase;margin-top:2px;color:rgba(244,239,230,.78);">Volume</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AWARDS MARQUEE ============ -->
+<section style="position:relative;background:#EFE9DD;border-top:1px solid rgba(33,28,21,.13);border-bottom:1px solid rgba(33,28,21,.13);overflow:hidden;">
+  <div style="display:flex;align-items:center;height:104px;">
+    <div id="marquee-track" style="display:flex;align-items:center;flex:none;animation:dotyMarquee 42s linear infinite;"></div>
+  </div>
+  <div style="position:absolute;left:0;top:0;bottom:0;display:flex;align-items:center;gap:22px;padding:0 40px 0 5.5vw;background:linear-gradient(90deg,#EFE9DD 72%,rgba(239,233,221,0));z-index:3;">
+    <span style="font-size:15px;color:#9A8A75;">←</span>
+    <div style="line-height:1.5;">
+      <div style="font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#211C15;">Recognized</div>
+      <div style="font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#9A8A75;">Across DFW</div>
+    </div>
+  </div>
+  <div style="position:absolute;right:0;top:0;bottom:0;display:flex;align-items:center;padding:0 40px;background:linear-gradient(270deg,#EFE9DD 55%,rgba(239,233,221,0));z-index:3;">
+    <span style="font-size:15px;color:#9A8A75;">→</span>
+  </div>
+</section>
+
+<!-- ============ OUR STORY ============ -->
+<section id="story" data-screen-label="Our Story" style="display:flex;background:#F4EFE6;border-bottom:1px solid rgba(33,28,21,.1);">
+  <div style="width:40%;min-height:520px;position:relative;overflow:hidden;">
+    <img src="assets/doty-story.webp" alt="Agent lifestyle" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+  </div>
+  <div data-reveal style="flex:1;display:flex;align-items:stretch;">
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;padding:88px 64px;border-right:1px solid rgba(33,28,21,.1);">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:28px;">
+        <span style="width:36px;height:1px;background:#9A8A75;"></span>
+        <span style="font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#6B6151;">Our Story</span>
+      </div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(38px,3.4vw,54px);line-height:1.04;color:#211C15;margin:0 0 28px;">Relationships<br>Over Transactions</h2>
+      <p style="max-width:430px;font-size:14.5px;line-height:1.9;font-weight:300;color:#5c5346;margin:0;">We believe real estate is about more than closing deals. It's about people, trust, and the moments that shape your story. Our boutique approach allows us to deliver thoughtful guidance and elevated service from start to finish.</p>
+      <a href="#" class="cta-link" style="display:inline-flex;align-items:center;gap:12px;margin-top:40px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#211C15;border-bottom:1px solid rgba(33,28,21,.3);padding-bottom:8px;width:fit-content;transition:gap .35s,color .35s;">Read Our Story&nbsp;<span style="font-size:15px;">→</span></a>
+    </div>
+    <div style="width:34%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px;position:relative;">
+      <div style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:230px;line-height:.7;color:#C9B79A;opacity:.42;">D</div>
+      <div style="text-align:center;margin-top:30px;">
+        <div style="font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#6B6151;">People First.</div>
+        <div style="font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#6B6151;margin-top:6px;">Experience Always.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMMUNITIES ============ -->
+<section id="communities" data-screen-label="Communities" style="background:#EFE9DD;padding:20px 5.5vw 0;height:327px;">
+  <div data-reveal style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:14px;">
+    <div style="display:flex;align-items:center;gap:14px;">
+      <span style="width:36px;height:1px;background:#9A8A75;"></span>
+      <span style="font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#6B6151;">Our Extraordinary Communities</span>
+    </div>
+    <a href="#" class="cta-link" style="display:inline-flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#211C15;transition:gap .35s,color .35s;">View All Communities&nbsp;<span style="font-size:14px;">→</span></a>
+  </div>
+  <div data-reveal style="display:grid;grid-template-columns:repeat(5,1fr);gap:5px;">
+
+    <div class="comm-card" style="position:relative;aspect-ratio:1/1;overflow:hidden;cursor:pointer;transition:transform .55s cubic-bezier(.16,.7,.3,1),box-shadow .55s;">
+      <div class="comm-img" style="position:absolute;inset:0;transition:transform .9s cubic-bezier(.16,.7,.3,1);">
+        <img src="assets/doty-southlake.webp" alt="Southlake" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top,rgba(20,24,18,.78),rgba(20,24,18,.05) 55%);"></div>
+      <div style="position:absolute;left:22px;bottom:22px;pointer-events:none;">
+        <div style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:27px;color:#F4EFE6;line-height:1;">Southlake</div>
+        <div style="display:flex;align-items:center;gap:9px;margin-top:12px;font-size:9px;letter-spacing:.26em;text-transform:uppercase;color:rgba(244,239,230,.85);">Explore&nbsp;<span style="font-size:13px;">→</span></div>
+      </div>
+    </div>
+
+    <div class="comm-card" style="position:relative;aspect-ratio:1/1;overflow:hidden;cursor:pointer;transition:transform .55s cubic-bezier(.16,.7,.3,1),box-shadow .55s;">
+      <div class="comm-img" style="position:absolute;inset:0;transition:transform .9s cubic-bezier(.16,.7,.3,1);">
+        <img src="assets/doty-westlake.webp" alt="Westlake" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top,rgba(20,24,18,.78),rgba(20,24,18,.05) 55%);"></div>
+      <div style="position:absolute;left:22px;bottom:22px;pointer-events:none;">
+        <div style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:27px;color:#F4EFE6;line-height:1;">Westlake</div>
+        <div style="display:flex;align-items:center;gap:9px;margin-top:12px;font-size:9px;letter-spacing:.26em;text-transform:uppercase;color:rgba(244,239,230,.85);">Explore&nbsp;<span style="font-size:13px;">→</span></div>
+      </div>
+    </div>
+
+    <div class="comm-card" style="position:relative;aspect-ratio:1/1;overflow:hidden;cursor:pointer;transition:transform .55s cubic-bezier(.16,.7,.3,1),box-shadow .55s;">
+      <div class="comm-img" style="position:absolute;inset:0;transition:transform .9s cubic-bezier(.16,.7,.3,1);">
+        <img src="assets/doty-keller.webp" alt="Keller" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top,rgba(20,24,18,.78),rgba(20,24,18,.05) 55%);"></div>
+      <div style="position:absolute;left:22px;bottom:22px;pointer-events:none;">
+        <div style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:27px;color:#F4EFE6;line-height:1;">Keller</div>
+        <div style="display:flex;align-items:center;gap:9px;margin-top:12px;font-size:9px;letter-spacing:.26em;text-transform:uppercase;color:rgba(244,239,230,.85);">Explore&nbsp;<span style="font-size:13px;">→</span></div>
+      </div>
+    </div>
+
+    <div class="comm-card" style="position:relative;aspect-ratio:1/1;overflow:hidden;cursor:pointer;transition:transform .55s cubic-bezier(.16,.7,.3,1),box-shadow .55s;">
+      <div class="comm-img" style="position:absolute;inset:0;transition:transform .9s cubic-bezier(.16,.7,.3,1);">
+        <img src="assets/doty-colleyville.webp" alt="Colleyville" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top,rgba(20,24,18,.78),rgba(20,24,18,.05) 55%);"></div>
+      <div style="position:absolute;left:22px;bottom:22px;pointer-events:none;">
+        <div style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:27px;color:#F4EFE6;line-height:1;">Colleyville</div>
+        <div style="display:flex;align-items:center;gap:9px;margin-top:12px;font-size:9px;letter-spacing:.26em;text-transform:uppercase;color:rgba(244,239,230,.85);">Explore&nbsp;<span style="font-size:13px;">→</span></div>
+      </div>
+    </div>
+
+    <div class="comm-card" style="position:relative;aspect-ratio:1/1;overflow:hidden;cursor:pointer;transition:transform .55s cubic-bezier(.16,.7,.3,1),box-shadow .55s;">
+      <div class="comm-img" style="position:absolute;inset:0;transition:transform .9s cubic-bezier(.16,.7,.3,1);">
+        <img src="assets/doty-grapevine.webp" alt="Grapevine" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top,rgba(20,24,18,.78),rgba(20,24,18,.05) 55%);"></div>
+      <div style="position:absolute;left:22px;bottom:22px;pointer-events:none;">
+        <div style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:27px;color:#F4EFE6;line-height:1;">Grapevine</div>
+        <div style="display:flex;align-items:center;gap:9px;margin-top:12px;font-size:9px;letter-spacing:.26em;text-transform:uppercase;color:rgba(244,239,230,.85);">Explore&nbsp;<span style="font-size:13px;">→</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ JOURNAL ============ -->
+<section id="journal" data-screen-label="Journal" style="background:#F4EFE6;padding:40px 5.5vw 56px;border-top:1px solid rgba(33,28,21,.1);">
+  <div style="display:grid;grid-template-columns:0.78fr 2.4fr;gap:56px;align-items:start;">
+    <div data-reveal style="position:relative;top:8px;">
+      <div style="font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#6B6151;margin-bottom:22px;">The Doty Journal</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(34px,3vw,46px);line-height:1.05;color:#211C15;margin:0 0 22px;">Insights &amp;<br>Inspiration</h2>
+      <p style="font-size:13.5px;line-height:1.85;font-weight:300;color:#5c5346;margin:0 0 30px;max-width:240px;">Your guide to luxury living in DFW. From market insights to home design and local favorites.</p>
+      <a href="#" class="cta-link" style="display:inline-flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#211C15;border-bottom:1px solid rgba(33,28,21,.3);padding-bottom:8px;transition:gap .35s,color .35s;">Explore the Journal&nbsp;<span style="font-size:14px;">→</span></a>
+    </div>
+    <div data-reveal style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;">
+
+      <div class="art-card" style="cursor:pointer;transition:transform .5s cubic-bezier(.16,.7,.3,1),box-shadow .5s;">
+        <div style="position:relative;height:184px;overflow:hidden;margin-bottom:22px;">
+          <img src="assets/doty-journal-1.webp" alt="Market Insights" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div style="font-size:9px;letter-spacing:.26em;text-transform:uppercase;color:#9A8A75;margin-bottom:14px;">Market Insights</div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:23px;line-height:1.18;color:#211C15;margin:0 0 22px;min-height:80px;">2025 DFW Luxury Market Forecast</h3>
+        <div style="display:flex;align-items:center;gap:10px;font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:#211C15;padding-top:18px;border-top:1px solid rgba(33,28,21,.13);">Read Article&nbsp;<span style="font-size:13px;">→</span></div>
+      </div>
+
+      <div class="art-card" style="cursor:pointer;transition:transform .5s cubic-bezier(.16,.7,.3,1),box-shadow .5s;">
+        <div style="position:relative;height:184px;overflow:hidden;margin-bottom:22px;">
+          <img src="assets/doty-journal-2.webp" alt="Local Guide" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div style="font-size:9px;letter-spacing:.26em;text-transform:uppercase;color:#9A8A75;margin-bottom:14px;">Local Guide</div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:23px;line-height:1.18;color:#211C15;margin:0 0 22px;min-height:80px;">Moving to Southlake? Here's What You Need to Know</h3>
+        <div style="display:flex;align-items:center;gap:10px;font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:#211C15;padding-top:18px;border-top:1px solid rgba(33,28,21,.13);">Read Article&nbsp;<span style="font-size:13px;">→</span></div>
+      </div>
+
+      <div class="art-card" style="cursor:pointer;transition:transform .5s cubic-bezier(.16,.7,.3,1),box-shadow .5s;">
+        <div style="position:relative;height:184px;overflow:hidden;margin-bottom:22px;">
+          <img src="assets/doty-journal-3.webp" alt="Design & Lifestyle" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div style="font-size:9px;letter-spacing:.26em;text-transform:uppercase;color:#9A8A75;margin-bottom:14px;">Design &amp; Lifestyle</div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:23px;line-height:1.18;color:#211C15;margin:0 0 22px;min-height:80px;">The New Era of Home Design: Timeless &amp; Tailored</h3>
+        <div style="display:flex;align-items:center;gap:10px;font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:#211C15;padding-top:18px;border-top:1px solid rgba(33,28,21,.13);">Read Article&nbsp;<span style="font-size:13px;">→</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIAL ============ -->
+<section data-screen-label="Testimonial" style="display:flex;background:#25342A;height:520px;">
+  <div data-reveal style="width:58%;display:flex;flex-direction:column;justify-content:center;padding:80px 60px 80px 5.5vw;overflow:hidden;">
+    <div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:90px;line-height:.5;color:rgba(201,183,154,.4);margin-bottom:18px;">"</div>
+    <div style="display:flex;gap:48px;align-items:flex-start;">
+      <p id="t-quote" class="t-text" style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,2.5vw,38px);line-height:1.32;color:#F4EFE6;margin:0;max-width:640px;flex:1;min-height:180px;"></p>
+      <div id="t-attr" class="t-attr" style="padding-top:10px;min-width:170px;flex-shrink:0;">
+        <div id="t-name" style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#C9B79A;"></div>
+        <div id="t-loc"  style="font-size:11px;letter-spacing:.08em;color:rgba(244,239,230,.6);margin-top:8px;font-weight:300;"></div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:30px;margin-top:54px;">
+      <div id="dots" style="display:flex;gap:9px;"></div>
+      <div style="width:40px;height:1px;background:rgba(244,239,230,.25);"></div>
+      <div style="display:flex;gap:20px;">
+        <span id="prev-t" class="arr" style="font-size:17px;color:rgba(244,239,230,.7);cursor:pointer;transition:color .3s;">←</span>
+        <span id="next-t" class="arr" style="font-size:17px;color:rgba(244,239,230,.7);cursor:pointer;transition:color .3s;">→</span>
+      </div>
+    </div>
+  </div>
+  <div style="width:42%;position:relative;overflow:hidden;">
+    <img src="assets/doty-testimonial.webp" alt="Lifestyle detail" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section data-screen-label="Services" style="display:grid;grid-template-columns:repeat(3,1fr);background:#211C15;">
+
+  <div class="svc-card" style="position:relative;height:420px;overflow:hidden;cursor:pointer;transition:transform .55s cubic-bezier(.16,.7,.3,1),box-shadow .55s;">
+    <div class="svc-img" style="position:absolute;inset:0;transition:transform .9s cubic-bezier(.16,.7,.3,1);">
+      <img src="assets/doty-buy.webp" alt="Buy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+    </div>
+    <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top,rgba(20,24,18,.9),rgba(20,24,18,0));"></div>
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:44px 40px;pointer-events:none;">
+      <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:46px;line-height:1;color:#F4EFE6;margin:0 0 16px;">Buy</h3>
+      <p style="font-size:13.5px;line-height:1.7;font-weight:300;color:rgba(244,239,230,.82);margin:0 0 26px;max-width:260px;">Find the perfect home with expert guidance every step of the way.</p>
+      <div style="display:flex;align-items:center;gap:11px;font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:#C9B79A;">I'm Looking to Buy&nbsp;<span style="font-size:13px;">→</span></div>
+    </div>
+  </div>
+
+  <div class="svc-card" style="position:relative;height:420px;overflow:hidden;cursor:pointer;transition:transform .55s cubic-bezier(.16,.7,.3,1),box-shadow .55s;">
+    <div class="svc-img" style="position:absolute;inset:0;transition:transform .9s cubic-bezier(.16,.7,.3,1);">
+      <img src="assets/doty-sell.webp" alt="Sell" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+    </div>
+    <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top,rgba(20,24,18,.9),rgba(20,24,18,0));"></div>
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:44px 40px;pointer-events:none;">
+      <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:46px;line-height:1;color:#F4EFE6;margin:0 0 16px;">Sell</h3>
+      <p style="font-size:13.5px;line-height:1.7;font-weight:300;color:rgba(244,239,230,.82);margin:0 0 26px;max-width:260px;">Maximize your home's value with a strategic and elevated approach.</p>
+      <div style="display:flex;align-items:center;gap:11px;font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:#C9B79A;">I'm Ready to Sell&nbsp;<span style="font-size:13px;">→</span></div>
+    </div>
+  </div>
+
+  <div class="svc-card" style="position:relative;height:420px;overflow:hidden;cursor:pointer;transition:transform .55s cubic-bezier(.16,.7,.3,1),box-shadow .55s;">
+    <div class="svc-img" style="position:absolute;inset:0;transition:transform .9s cubic-bezier(.16,.7,.3,1);">
+      <img src="assets/doty-join.webp" alt="Join" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+    </div>
+    <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top,rgba(20,24,18,.9),rgba(20,24,18,0));"></div>
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:44px 40px;pointer-events:none;">
+      <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:46px;line-height:1;color:#F4EFE6;margin:0 0 16px;">Join</h3>
+      <p style="font-size:13.5px;line-height:1.7;font-weight:300;color:rgba(244,239,230,.82);margin:0 0 26px;max-width:260px;">Build your career with a brokerage that invests in your success.</p>
+      <div style="display:flex;align-items:center;gap:11px;font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:#C9B79A;">I'm a Licensed Agent&nbsp;<span style="font-size:13px;">→</span></div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ============ LEAD MAGNET ============ -->
+<section id="guide" data-screen-label="Guide" style="background:#EFE9DD;padding:84px 5.5vw;border-top:1px solid rgba(33,28,21,.1);height:329px;display:flex;align-items:center;">
+  <div data-reveal style="display:grid;grid-template-columns:0.9fr 1.1fr 1.2fr;gap:48px;align-items:center;width:100%;">
+    <img src="assets/market-report.png" alt="2025 Southlake Luxury Market Report" style="width:240px;height:auto;filter:drop-shadow(0 16px 36px rgba(33,28,21,.22));justify-self:start;">
+    <div>
+      <div style="font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#9A8A75;margin-bottom:16px;">Complimentary Guide</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(28px,2.5vw,38px);line-height:1.08;color:#211C15;margin:0 0 16px;">2025 Southlake<br>Luxury Market Report</h2>
+      <p style="font-size:13.5px;line-height:1.8;font-weight:300;color:#5c5346;margin:0;max-width:330px;">Get exclusive insights on market trends, home values, and the luxury landscape.</p>
+    </div>
+    <div>
+      <div id="guide-form" style="display:flex;gap:14px;align-items:stretch;flex-wrap:wrap;">
+        <input id="g-fname" placeholder="First Name" style="flex:1;min-width:140px;background:transparent;border:1px solid rgba(33,28,21,.28);padding:16px 18px;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#211C15;transition:border-color .3s;">
+        <input id="g-email" placeholder="Email Address" style="flex:1.3;min-width:160px;background:transparent;border:1px solid rgba(33,28,21,.28);padding:16px 18px;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#211C15;transition:border-color .3s;">
+        <button id="g-btn" class="dl-btn" style="background:#25342A;color:#F4EFE6;border:none;padding:16px 30px;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background .3s,letter-spacing .3s;">Download Guide</button>
+      </div>
+      <div id="guide-thanks" style="display:none;align-items:center;gap:14px;padding:30px 0;">
+        <span style="font-size:30px;color:#25342A;font-family:'Cormorant Garamond',serif;">✓</span>
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#211C15;">Thank you.</div>
+          <div style="font-size:12px;color:#5c5346;font-weight:300;margin-top:4px;">Your guide is on its way to your inbox.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer data-screen-label="Footer" style="background:#E7DFD1;padding:72px 5.5vw 40px;border-top:1px solid rgba(33,28,21,.13);">
+  <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:56px;border-bottom:1px solid rgba(33,28,21,.13);">
+    <div>
+      <div style="width:54px;height:54px;border:1px solid rgba(33,28,21,.35);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:500;color:#211C15;margin-bottom:24px;">D</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:21px;line-height:1.5;color:#3a342a;">Curated Homes.<br>Exceptional Service.<br>A Life Well Lived.</div>
+    </div>
+    <div>
+      <div style="font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#9A8A75;margin-bottom:22px;">Explore</div>
+      <div style="display:flex;flex-direction:column;gap:13px;">
+        <a href="#" class="footer-link" style="font-size:13px;color:#3a342a;font-weight:300;transition:color .3s;">Buy</a>
+        <a href="#" class="footer-link" style="font-size:13px;color:#3a342a;font-weight:300;transition:color .3s;">Sell</a>
+        <a href="#communities" class="footer-link" style="font-size:13px;color:#3a342a;font-weight:300;transition:color .3s;">Communities</a>
+        <a href="#" class="footer-link" style="font-size:13px;color:#3a342a;font-weight:300;transition:color .3s;">Featured Properties</a>
+        <a href="#journal" class="footer-link" style="font-size:13px;color:#3a342a;font-weight:300;transition:color .3s;">Journal</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#9A8A75;margin-bottom:22px;">Company</div>
+      <div style="display:flex;flex-direction:column;gap:13px;">
+        <a href="#story" class="footer-link" style="font-size:13px;color:#3a342a;font-weight:300;transition:color .3s;">About</a>
+        <a href="#" class="footer-link" style="font-size:13px;color:#3a342a;font-weight:300;transition:color .3s;">Our Team</a>
+        <a href="#" class="footer-link" style="font-size:13px;color:#3a342a;font-weight:300;transition:color .3s;">Client Experience</a>
+        <a href="#" class="footer-link" style="font-size:13px;color:#3a342a;font-weight:300;transition:color .3s;">Careers</a>
+        <a href="#" class="footer-link" style="font-size:13px;color:#3a342a;font-weight:300;transition:color .3s;">Contact</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#9A8A75;margin-bottom:22px;">Connect</div>
+      <div style="display:flex;flex-direction:column;gap:13px;">
+        <a href="#" class="footer-link" style="font-size:13px;color:#3a342a;font-weight:300;transition:color .3s;">Instagram</a>
+        <a href="#" class="footer-link" style="font-size:13px;color:#3a342a;font-weight:300;transition:color .3s;">Facebook</a>
+        <a href="#" class="footer-link" style="font-size:13px;color:#3a342a;font-weight:300;transition:color .3s;">Email</a>
+        <span style="font-size:13px;color:#3a342a;font-weight:300;">(817) 310-9088</span>
+      </div>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.5;color:#3a342a;">Proudly Serving<br>Southlake &amp; Surrounding Areas</div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;padding-top:26px;">
+    <div style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#9A8A75;">© 2025 Doty Real Estate. All Rights Reserved.</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:.4em;color:#9A8A75;padding-left:.4em;">DOTY</div>
+  </div>
+</footer>
+
+<script>
+// ── AWARDS MARQUEE ──────────────────────────────────────────────
+(function() {
+  const ink = "#211C15", taupe = "#8B7B66", mut = "#6B6151";
+  const d = (s) => `<span style="width:5px;height:5px;transform:rotate(45deg);background:rgba(33,28,21,.22);flex:none;display:inline-block;"></span>`;
+  const top = `<div style="display:flex;flex-direction:column;line-height:1.05;align-items:center;"><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:15px;color:${mut};">top</span><span style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:23px;letter-spacing:.01em;color:${ink};">REALTORS</span><span style="font-size:6.5px;letter-spacing:.24em;color:${taupe};margin-top:2px;">FORT WORTH MAGAZINE</span></div>`;
+  const best = (yr) => `<div style="display:flex;align-items:center;gap:9px;"><span style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:42px;color:${ink};line-height:.9;">D</span><div style="display:flex;flex-direction:column;line-height:1.25;"><span style="font-size:8px;letter-spacing:.22em;color:${taupe};">BEST OF</span><span style="font-size:11px;letter-spacing:.12em;color:${ink};">${yr}</span></div></div>`;
+  const mt = `<div style="display:flex;flex-direction:column;align-items:center;line-height:1.1;"><span style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:25px;letter-spacing:.04em;color:${ink};">M+T</span><span style="font-size:8px;letter-spacing:.26em;color:${taupe};margin-top:3px;">METROTEX</span></div>`;
+  const rp = `<div style="display:flex;align-items:center;gap:11px;"><div style="width:44px;height:44px;border:1px solid ${taupe};border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:18px;color:${ink};">RP</div><div style="display:flex;flex-direction:column;line-height:1.3;"><span style="font-size:7px;letter-spacing:.22em;color:${taupe};">REAL PRODUCERS</span><span style="font-size:10px;letter-spacing:.14em;color:${ink};">TOP 500</span></div></div>`;
+  const ss = `<div style="display:flex;flex-direction:column;align-items:center;line-height:1.15;"><span style="font-size:8px;letter-spacing:.24em;color:${taupe};">SOUTHLAKE STYLE</span><span style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;letter-spacing:.02em;color:${ink};margin:2px 0;">Super Agent</span><span style="font-size:8px;letter-spacing:.24em;color:${taupe};">2025</span></div>`;
+  const inner = `${top}${d()}${best("2022")}${d()}${best("2023")}${d()}${mt}${d()}${rp}${d()}${ss}${d()}`;
+  const set = `<div style="display:flex;align-items:center;gap:72px;padding:0 36px;flex-shrink:0;">${inner}</div>`;
+  document.getElementById('marquee-track').innerHTML = set + set;
+})();
+
+// ── TESTIMONIALS ─────────────────────────────────────────────────
+(function() {
+  const testimonials = [
+    { q: "Danielle and her team made our home buying experience seamless and enjoyable. Their knowledge, communication, and dedication are truly unmatched.", n: "Tara Eisenrich", loc: "Southlake, Texas" },
+    { q: "From our first conversation to closing day, every detail was handled with grace and precision. We never once felt like just another transaction.", n: "Michael & Lena Hart", loc: "Westlake, Texas" },
+    { q: "They understood exactly what we were looking for and delivered far beyond our expectations. Truly the gold standard in luxury service.", n: "J. Caldwell", loc: "Colleyville, Texas" }
+  ];
+  let current = 0;
+  let animating = false;
+
+  const quote = document.getElementById('t-quote');
+  const attr  = document.getElementById('t-attr');
+  const name  = document.getElementById('t-name');
+  const loc   = document.getElementById('t-loc');
+  const dots  = document.getElementById('dots');
+
+  function buildDots() {
+    dots.innerHTML = '';
+    testimonials.forEach((_, i) => {
+      const s = document.createElement('span');
+      s.className = 'dot';
+      s.style.cssText = `width:7px;height:7px;border-radius:50%;display:inline-block;background:${i === current ? '#C9B79A' : 'rgba(244,239,230,.28)'};`;
+      s.addEventListener('click', () => go(i));
+      dots.appendChild(s);
+    });
+  }
+
+  function render() {
+    const t = testimonials[current];
+    quote.textContent = t.q;
+    name.textContent  = '— ' + t.n;
+    loc.textContent   = t.loc;
+    buildDots();
+  }
+
+  function go(i) {
+    if (animating || i === current) return;
+    animating = true;
+    quote.classList.add('t-out');
+    attr.classList.add('t-out');
+    setTimeout(() => {
+      current = i;
+      render();
+      quote.classList.remove('t-out');
+      attr.classList.remove('t-out');
+      animating = false;
+    }, 340);
+  }
+
+  document.getElementById('prev-t').addEventListener('click', () => go((current - 1 + testimonials.length) % testimonials.length));
+  document.getElementById('next-t').addEventListener('click', () => go((current + 1) % testimonials.length));
+
+  render();
+})();
+
+// ── GUIDE FORM ───────────────────────────────────────────────────
+document.getElementById('g-btn').addEventListener('click', function() {
+  document.getElementById('guide-form').style.display = 'none';
+  const thanks = document.getElementById('guide-thanks');
+  thanks.style.display = 'flex';
+});
+</script>
+</body>
+</html>
